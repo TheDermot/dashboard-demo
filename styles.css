@@ -51,9 +51,9 @@ ul {
   position: sticky;
   top: 0;
   height: 100vh;
+  border-right: 1px black solid;
 }
 .logo {
-  border: 1px black solid;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -69,14 +69,13 @@ ul {
   color: black;
 }
 .main-links {
-  border-bottom: 1px solid black;
   margin-bottom: 100%;
 }
 .header {
   grid-area: header;
   position: sticky;
   top: 0;
-  border: 1px black solid;
+  border-bottom: 1px black solid;
   background-color: white;
 }
 .header-content {
@@ -104,7 +103,6 @@ ul {
     "today status"
     "favorites favorites"
     "data data";
-  border: 1px green solid;
   gap: 1rem;
   padding-inline: 1rem;
   min-height: 100%;
@@ -121,7 +119,6 @@ ul {
 }
 .welcome-create {
   grid-area: welcome;
-  border: 1px yellow solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,10 +138,8 @@ ul {
 .favorite-cards-display > div,
 .todays-cards-display > div {
   border: 1px black solid;
-  border-left: 3px solid rgb(56, 134, 37);
   padding: 1rem;
   min-height: 100%;
-  border-radius: 0.8rem;
   background-color: rgba(255, 255, 255, 0.856);
   box-shadow: 0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.397);
 }
@@ -153,9 +148,18 @@ ul {
 }
 .todays-cards-display {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* autofill */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* autofill */
   gap: 1rem;
 }
+div.today-card {
+  border-left: 3px solid rgb(56, 134, 37);
+  border-radius: 0 1rem 0 1rem;
+}
+div.favorite-card {
+  border-left: 3px solid rgb(228, 52, 8);
+  border-radius: 0.4rem;
+}
+
 .data {
   grid-area: data;
 }
@@ -184,7 +188,6 @@ ul {
 }
 .status-column {
   grid-area: status;
-  border: 1px blue solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
