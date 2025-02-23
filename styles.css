@@ -1,0 +1,20 @@
+:root {
+  --clr-primary: rgba(0 0 0 / 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Courier New", Courier, monospace;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
