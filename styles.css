@@ -18,3 +18,84 @@ img {
   max-width: 100%;
   display: block;
 }
+li {
+  list-style-type: none;
+}
+
+/* css */
+.container {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.5fr) 4fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main-grid"
+    "sidebar main-grid";
+}
+.sidebar {
+  grid-area: sidebar;
+  position: fixed;
+}
+.header {
+  grid-area: header;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+.header-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.header-right {
+  justify-self: flex-end;
+  display: flex;
+}
+.header-right i {
+  margin-right: 1rem;
+}
+.main-grid {
+  grid-area: main-grid;
+  display: grid;
+  grid-template-columns: 3fr minmax(200px, 1fr);
+  grid-template-rows: minmax(50px, 0.5fr) 1fr 2fr 2fr;
+  grid-template-areas:
+    "welcome status"
+    "favorites status"
+    "today status"
+    "chart status";
+  border: 1px green solid;
+  gap: 1rem;
+  padding-inline: 1rem;
+}
+.welcome-create {
+  grid-area: welcome;
+  border: 1px yellow solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.favorite-cards {
+  grid-area: favorites;
+}
+.favorite-cards-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* autofill */
+  gap: 1rem;
+}
+.favorite-cards-display > div {
+  border: 1px black solid;
+  padding: 1rem;
+}
+.todays-cards {
+  grid-area: today;
+}
+.chart {
+  grid-area: chart;
+}
+.status-column {
+  grid-area: status;
+  border: 1px blue solid;
+  padding-inline: 1rem;
+}
