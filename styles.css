@@ -59,7 +59,7 @@ li {
   grid-area: main-grid;
   display: grid;
   grid-template-columns: 3fr minmax(200px, 1fr);
-  grid-template-rows: minmax(50px, 0.5fr) 1fr 2fr 2fr;
+  grid-template-rows: minmax(50px, 0.2fr) auto auto auto;
   grid-template-areas:
     "welcome status"
     "favorites status"
@@ -84,15 +84,24 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* autofill */
   gap: 1rem;
 }
-.favorite-cards-display > div {
+.favorite-cards-display > div, .todays-cards-display > div {
   border: 1px black solid;
   padding: 1rem;
+  min-height: 100%;
 }
 .todays-cards {
   grid-area: today;
 }
+.todays-cards-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* autofill */
+  gap: 1rem;
+}
 .chart {
   grid-area: chart;
+}
+.chart img {
+    height: 100%;
 }
 .status-column {
   grid-area: status;
