@@ -57,6 +57,7 @@ ul {
 .sidebar img[src$="svg"] {
   width: min(80%, 1.2rem);
 }
+
 .logo {
   height: 5rem;
   display: flex;
@@ -76,7 +77,8 @@ ul {
   flex: 1 1 auto;
 }
 .links a,
-.logout a {
+.logout a,
+.login a {
   padding: 8px;
   display: flex;
   align-items: center;
@@ -104,14 +106,14 @@ ul {
 }
 .header-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3.5fr 1fr;
   align-content: center;
   justify-content: center;
   min-height: 100%;
   padding-inline: 1rem;
 }
 #search {
-  width: 100%;
+  width: clamp(60%, 100%, 1200px);
   border-radius: 0.4rem;
   padding: 0.3rem;
 }
@@ -129,12 +131,14 @@ input[type="text"]:focus {
   outline: 0;
   outline: thin dotted \9;
 }
-.header-right {
-  justify-self: flex-end;
-  display: flex;
+.header-left {
+  margin-block: auto;
 }
-.header-right i {
-  margin-right: 1rem;
+.login a {
+  justify-content: flex-end;
+}
+.login img {
+  width: min(80%, 3rem);
 }
 .main-grid {
   grid-area: main-grid;
