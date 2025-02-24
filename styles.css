@@ -144,7 +144,7 @@ input[type="text"]:focus {
   grid-area: main-grid;
   display: grid;
   grid-template-columns: 3fr minmax(200px, 0.5fr);
-  grid-template-rows: minmax(50px, 0.2fr) auto auto auto;
+  grid-template-rows: minmax(50px, 0.2fr) auto auto auto auto;
   grid-template-areas:
     "welcome welcome"
     "today status"
@@ -154,6 +154,26 @@ input[type="text"]:focus {
   padding-inline: 1rem;
   min-height: 100%;
   background-color: rgb(248, 248, 248);
+}
+@media (width < 720px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(50px, 0.2fr) auto 150px auto auto;
+
+    grid-template-areas:
+      "welcome"
+      "today"
+      "status"
+      "favorites"
+      "data";
+  }
+  .status-column img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+  }
 }
 .main-grid h3 {
   font-size: var(--font-size-header-3);
@@ -169,7 +189,6 @@ input[type="text"]:focus {
   display: flex;
   align-items: center;
   padding-top: 1rem;
-  max-width: 83%;
 }
 .welcome-create h2 {
   font-size: var(--font-size-header-1);
@@ -190,6 +209,12 @@ input[type="text"]:focus {
 .action-buttons #share {
   border: 1px solid rgb(68, 6, 9);
   box-shadow: -0.1rem 0.2rem 0.1rem rgba(44, 3, 10, 0.151);
+}
+.status-column {
+  grid-area: status;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .favorite-cards {
   grid-area: favorites;
@@ -214,11 +239,11 @@ input[type="text"]:focus {
 }
 .todays-cards-display {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* autofill */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* autofill */
   gap: 1rem;
   padding-top: 1rem;
 }
-div.today-card{
+div.today-card {
   border-left: 3px solid rgb(56, 134, 37);
   border-radius: 0 1rem 0 1rem;
 }
@@ -364,10 +389,4 @@ div.favorite-card {
   background-color: rgba(255, 47, 144, 0.493);
   border-radius: 0.2rem 1rem 1rem 0.2rem;
   width: 70%;
-}
-.status-column {
-  grid-area: status;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
