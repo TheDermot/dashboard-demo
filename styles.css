@@ -167,13 +167,29 @@ input[type="text"]:focus {
 .welcome-create {
   grid-area: welcome;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
+  max-width: 83%;
 }
 .welcome-create h2 {
   font-size: var(--font-size-header-1);
   font-weight: 300;
+  padding-right: 1rem;
+}
+.action-buttons button {
+  padding: 0.4rem 1.6rem;
+  background-color: rgba(252, 253, 250, 0.842);
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+.action-buttons #create {
+  border: 1px solid rgb(18, 87, 16);
+  box-shadow: -0.1rem 0.2rem 0.1rem rgba(79, 179, 76, 0.151);
+}
+.action-buttons #share {
+  border: 1px solid rgb(68, 6, 9);
+  box-shadow: -0.1rem 0.2rem 0.1rem rgba(44, 3, 10, 0.151);
 }
 .favorite-cards {
   grid-area: favorites;
