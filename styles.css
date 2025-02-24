@@ -6,7 +6,7 @@
   --font-size-header-3: 1.5rem;
   --font-size-header-4: 1.65rem;
   --font-size-header-5: 1.04rem;
-  --font-size-side-links: 1.25rem;
+  --font-size-side-links: 1.35rem;
 }
 
 *,
@@ -33,7 +33,7 @@ ul {
 /* css */
 .container {
   display: grid;
-  grid-template-columns: minmax(150px, 0.5fr) 4fr;
+  grid-template-columns: minmax(160px, 0.5fr) 4fr;
   grid-template-rows: 5rem auto;
   grid-template-areas:
     "sidebar header"
@@ -51,6 +51,11 @@ ul {
   top: 0;
   height: 100vh;
   border-right: 1px black solid;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar img[src$="svg"] {
+  width: min(80%, 1.2rem);
 }
 .logo {
   height: 5rem;
@@ -66,15 +71,30 @@ ul {
   max-width: fit-content;
 }
 .links {
-  padding: 16px 0 16px 16px;
-  font-size: var(--font-size-side-links);
+  padding: 16px 8px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
-.links a {
+.links a,
+.logout a {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
   color: black;
 }
-.main-links {
-  margin-bottom: 100%;
+.main-links{
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px black solid;
+}
+.logout {
+  margin-top: auto;
+}
+.logout a{
+  justify-content: center;
 }
 .header {
   grid-area: header;
@@ -177,9 +197,8 @@ div.favorite-card {
   margin-top: 1rem;
   gap: 2rem;
 }
-.data-content h3{
+.data-content h3 {
   padding-top: 1rem;
-
 }
 .data-img {
   border: 1px rgb(63, 58, 58) solid;
