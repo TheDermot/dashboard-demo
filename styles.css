@@ -19,7 +19,7 @@
   padding: 0;
 }
 html {
-  font-family:'Courier New', Courier, monospace
+  font-family: "Courier New", Courier, monospace;
 }
 img {
   max-width: 100%;
@@ -60,10 +60,10 @@ ul {
   border-bottom: 1px black solid;
   max-width: 100%;
 }
-.logo p{
-    align-self: center;
-    font-size: 2em;
-    max-width: fit-content;
+.logo p {
+  align-self: center;
+  font-size: 2em;
+  max-width: fit-content;
 }
 .links {
   height: 100%;
@@ -170,29 +170,68 @@ div.favorite-card {
 
 .data {
   grid-area: data;
+  margin-bottom: 1rem;
 }
 .data-content {
   display: flex;
   justify-content: center;
-  align-items: center;
-  border: purple 2px solid;
+  margin-top: 1rem;
+  gap: 2rem;
 }
 .data-img {
-  border: 2px orange solid;
+  border: 1px rgb(63, 58, 58) solid;
   display: flex;
-  flex: 1 1 80%;
-  padding: 6rem;
+  flex: 1 1 70%;
+  border-radius: 0.5rem;
+  box-shadow: -0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.397);
+}
+
+.data-img img {
+  padding: 3rem;
 }
 .tracked-goals {
-  border: red 1px solid;
-  height: 100%;
   flex: 1 1 20%;
+  border: 1px rgb(63, 58, 58) solid;
+  border-radius: 0.5rem;
+  box-shadow: -0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.397);
+  height: fit-content;
 }
-.tracked-goals div {
-  padding: 1rem;
+.tracked-goals > div {
   margin-block: 1rem;
-  border: 1px black solid;
+  border: 1px rgba(63, 60, 60, 0.493) solid;
   margin-inline: 1rem;
+  border-radius: 0.2rem 1rem 1rem 0.2rem;
+  box-shadow: -0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.397);
+  background-color: rgba(119, 170, 134, 0.082);
+  font-size: var(--font-size-header-5);
+}
+[id^="tracked"] p {
+  padding: 1rem;
+}
+#tracked-1 div {
+  background-color: rgba(251, 255, 0, 0.795);
+  border-radius: 0.2rem 1rem 1rem 0.2rem;
+  width: 60%;
+}
+#tracked-2 div {
+  background-color: rgba(172, 255, 47, 0.795);
+  border-radius: 0.2rem 1rem 1rem 0.2rem;
+  width: 40%;
+}
+#tracked-3 div {
+  background-color: rgba(212, 22, 16, 0.479);
+  border-radius: 0.2rem 1rem 1rem 0.2rem;
+  width: 90%;
+}
+#tracked-4 div {
+  background-color: rgba(47, 120, 255, 0.479);
+  border-radius: 0.2rem 1rem 1rem 0.2rem;
+  width: 30%;
+}
+#tracked-5 div {
+  background-color: rgba(255, 47, 144, 0.493);
+  border-radius: 0.2rem 1rem 1rem 0.2rem;
+  width: 70%;
 }
 .status-column {
   grid-area: status;
