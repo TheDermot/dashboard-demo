@@ -198,6 +198,7 @@ input[type="text"]:focus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* autofill */
   gap: 1rem;
+  padding-top: 1rem;
 }
 .favorite-cards-display > div,
 .todays-cards-display > div {
@@ -215,10 +216,27 @@ input[type="text"]:focus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* autofill */
   gap: 1rem;
+  padding-top: 1rem;
 }
-div.today-card {
+div.today-card{
   border-left: 3px solid rgb(56, 134, 37);
   border-radius: 0 1rem 0 1rem;
+}
+div.today-card-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3px solid rgb(226, 212, 15);
+  border-radius: 0rem 1rem 0rem 1rem;
+}
+.today-card-add button {
+  height: fit-content;
+  font-size: 2.5rem;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  cursor: pointer;
 }
 div.favorite-card {
   border-left: 3px solid rgb(228, 52, 8);
@@ -242,7 +260,7 @@ div.favorite-card {
   border: 1px rgb(63, 58, 58) solid;
   display: flex;
   flex-direction: column;
-  flex: 1 1 70%;
+  flex: 1 1 calc(70% - 2rem);
   border-radius: 0.5rem;
   box-shadow: -0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.397);
   padding: 0 2rem;
@@ -259,7 +277,7 @@ div.favorite-card {
   gap: var(--item-gap);
   align-items: end;
   padding-inline: var(--item-gap);
-  --padding-block: 1.5rem; /*space for labels*/
+  --padding-block: 2.5rem; /*space for labels*/
   padding-block: var(--padding-block);
   position: relative;
   isolation: isolate;
@@ -298,12 +316,13 @@ div.favorite-card {
 }
 .simple-bar-chart > .item > .label {
   inset: 100% 0 auto 0;
+  padding-top: 0.5rem;
 }
 .simple-bar-chart > .item > .value {
   inset: auto 0 100% 0;
 }
 .tracked-goals {
-  flex: 1 1 20%;
+  flex: 1 1 30%;
   border: 1px rgb(63, 58, 58) solid;
   border-radius: 0.5rem;
   box-shadow: -0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.397);
