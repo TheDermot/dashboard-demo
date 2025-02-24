@@ -181,13 +181,14 @@ div.favorite-card {
 .data-img {
   border: 1px rgb(63, 58, 58) solid;
   display: flex;
+  flex-direction: column;
   flex: 1 1 70%;
   border-radius: 0.5rem;
   box-shadow: -0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.397);
 }
 
 .data-img img {
-  padding: 3rem;
+  padding: 2rem;
 }
 .tracked-goals {
   flex: 1 1 20%;
