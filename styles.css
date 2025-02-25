@@ -116,6 +116,7 @@ ul {
   display: flex;
   align-items: center;
 }
+
 .header-left img {
   max-width: 1.5rem;
   margin-right: 1rem;
@@ -144,9 +145,11 @@ input[type="text"]:focus {
 
 .login a {
   justify-content: flex-end;
+  gap: 0px;
+  padding: 0px;
 }
 .login img {
-  width: min(80%, 3rem);
+  width: min(60%, 4rem);
 }
 .main-grid {
   grid-area: main-grid;
@@ -405,7 +408,7 @@ div.favorite-card {
     grid-template-columns: 1fr;
     grid-template-areas:
       "header"
-      "main-grid"
+      "main-grid";
   }
   .header-left img {
     display: block;
