@@ -250,8 +250,8 @@ div.today-card {
   gap: 0.5rem;
   display: flex;
   opacity: 0;
-  transition: visibility 0.2s ease, opacity 1.3s;
-  visibility:collapse;
+  transition: max-height 1s linear, opacity 0.3s 0.4s;
+  max-height: 0;
 }
 .card-actions img {
   max-width: 20px;
@@ -260,7 +260,7 @@ div.today-card {
 .today-card:hover {
   .card-actions {
     opacity: 1;
-    visibility: visible;
+    max-height: 1rem;
   }
 }
 div.today-card-add {
