@@ -62,13 +62,13 @@ ul {
   height: 5rem;
   display: flex;
   justify-content: center;
-  font-family: "Darumadrop One", serif;
   max-width: 100%;
 }
-.logo p {
+.checky {
   align-self: center;
   font-size: 2em;
   max-width: fit-content;
+  font-family: cursive;
 }
 .links {
   padding: 16px 8px 16px 8px;
@@ -239,6 +239,29 @@ input[type="text"]:focus {
 div.today-card {
   border-left: 3px solid rgb(56, 134, 37);
   border-radius: 0 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: padding-bottom 1s;
+}
+.card-actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.089);
+  padding-top: 0.2rem;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  display: flex;
+  opacity: 0;
+  transition: visibility 0.2s ease, opacity 1.3s;
+  visibility:collapse;
+}
+.card-actions img {
+  max-width: 20px;
+  aspect-ratio: 1;
+}
+.today-card:hover {
+  .card-actions {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 div.today-card-add {
   display: flex;
@@ -435,6 +458,9 @@ div.favorite-card {
     padding: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
+  .sidebar-header p {
+    margin-right: auto;
+  }
 
   #close-sidebar {
     background: none;
@@ -465,7 +491,7 @@ div.favorite-card {
     flex-direction: column;
     text-align: center;
   }
-  .welcome-create h2{
+  .welcome-create h2 {
     padding: 0;
   }
 }
