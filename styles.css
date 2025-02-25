@@ -390,7 +390,7 @@ div.favorite-card {
 @media (width < 784px) {
   .main-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(50px, 0.2fr) auto 150px auto auto;
+    grid-template-rows: minmax(100px, 1fr) auto 150px auto auto;
 
     grid-template-areas:
       "welcome"
@@ -413,6 +413,9 @@ div.favorite-card {
     grid-template-areas:
       "header"
       "main-grid";
+  }
+  .header-content{
+    grid-template-columns: 2.5fr 1fr;
   }
   .header-left img {
     display: block;
@@ -444,7 +447,14 @@ div.favorite-card {
   .active {
     display: flex;
   }
+  .data-content{
+    flex-direction: column;
+  }
   .data-img {
     padding-bottom: 1rem;
+    height: 300px;
+  }
+  .simple-bar-chart{
+    height: inherit;
   }
 }
