@@ -383,6 +383,10 @@ div.favorite-card {
   width: 70%;
 }
 
+.sidebar-header {
+  display: none;
+}
+
 @media (width < 784px) {
   .main-grid {
     grid-template-columns: 1fr;
@@ -420,6 +424,22 @@ div.favorite-card {
     position: fixed;
     width: 200px;
     background-color: white;
+  }
+  .sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  #close-sidebar {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .logo {
+    display: none;
   }
   .active {
     display: flex;
