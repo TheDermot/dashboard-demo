@@ -193,6 +193,7 @@ input[type="text"]:focus {
   border-radius: 0.3rem;
   font-size: 1rem;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 .action-buttons #create {
   border: 1px solid rgb(18, 87, 16);
@@ -447,6 +448,7 @@ div.favorite-card {
   .active {
     display: flex;
   }
+
   .data-content{
     flex-direction: column;
   }
@@ -456,5 +458,16 @@ div.favorite-card {
   }
   .simple-bar-chart{
     height: inherit;
+  }
+}
+@media (width <560px) {
+    .welcome-create{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (width < 400px) {
+  .data-img{
+    padding: 0.5rem;
   }
 }
