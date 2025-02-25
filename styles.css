@@ -120,6 +120,7 @@ ul {
   max-width: 1.5rem;
   margin-right: 1rem;
   display: none;
+  cursor: pointer;
 }
 #search {
   width: clamp(60%, 100%, 1200px);
@@ -405,15 +406,22 @@ div.favorite-card {
     grid-template-areas:
       "header"
       "main-grid"
-      "main-grid";
   }
   .header-left img {
     display: block;
   }
   .sidebar {
     display: none;
+    z-index: 2;
+    height: 100vh;
+    position: fixed;
+    width: 200px;
+    background-color: white;
   }
-  .data-img{
-    padding-bottom: 1rem
+  .active {
+    display: flex;
+  }
+  .data-img {
+    padding-bottom: 1rem;
   }
 }
